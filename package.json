@@ -9,6 +9,7 @@
     "dev": "react-native run-ios",
     "getjs": "curl http://localhost:8081/index.ios.bundle -o main.jsbundle",
     "bundle-ios":"react-native bundle --entry-file index.ios.js --platform ios --bundle-output ./bundle/main.jsbundle --dev false --assets-dest ./bundle/",
+    "build-apk": "sh buildSignedApk.sh",
     "test": "jest",
     "e-ios": "react-native run-ios",
     "d-ios": "react-native run-ios --device 'Youngdi' ",
@@ -18,7 +19,6 @@
   "dependencies": {
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
-    "react-native-browser-polyfill": "^0.1.2",
     "react-navigation": "^1.0.0-beta.10",
     "react-redux": "5.0.4",
     "redux": "3.6.0"
