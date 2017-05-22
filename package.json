@@ -12,6 +12,7 @@
     "test": "jest",
     "e-ios": "react-native run-ios",
     "d-ios": "react-native run-ios --device 'Youngdi' ",
+    "rd-ios": "react-native run-ios --configuration Release --device 'Youngdi'",
     "e-android": "react-native run-android"
   },
   "dependencies": {
