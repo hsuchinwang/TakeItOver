@@ -6,7 +6,13 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "production": "react-native run-ios --configuration Release",
-    "dev": "react-native run-ios"
+    "dev": "react-native run-ios",
+    "getjs": "curl http://localhost:8081/index.ios.bundle -o main.jsbundle",
+    "bundle-ios":"react-native bundle --entry-file index.ios.js --platform ios --bundle-output ./bundle/main.jsbundle --dev false --assets-dest ./bundle/",
+    "test": "jest",
+    "e-ios": "react-native run-ios",
+    "d-ios": "react-native run-ios --device 'Youngdi' ",
+    "e-android": "react-native run-android"
   },
   "dependencies": {
     "react": "16.0.0-alpha.6",

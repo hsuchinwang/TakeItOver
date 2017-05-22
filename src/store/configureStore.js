@@ -8,7 +8,7 @@ import rootReducer from '../reducers/index';
 import { Platform } from 'react-native';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../reducers/index';
-import * as Config from '../constants/Config';
+//import * as Config from '../constants/Config';
 //import devTools from 'remote-redux-devtools';
 export default function configureStore(initialState) {
   const createStoreWithMiddleware = applyMiddleware()(createStore);
