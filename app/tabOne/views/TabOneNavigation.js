@@ -1,18 +1,18 @@
 'use strict'
 
 // React
-import React from 'react'
+import React from 'react';
 
 // Navigation
-import { addNavigationHelpers } from 'react-navigation'
-import { NavigatorTabOne } from '../navigationConfiguration'
+import { addNavigationHelpers } from 'react-navigation';
+import { NavigatorTabOne } from '../navigationConfiguration';
 import { goSecond } from '../../actions/tabOneAction';
 import { Platform } from 'react-native';
 // Redux
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // Icon
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const mapStateToProps = (state) => {

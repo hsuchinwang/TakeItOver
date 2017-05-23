@@ -1,10 +1,23 @@
 'use strict'
-import React from 'react'
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Button} from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Button} from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Platform } from 'react-native';
 export default class TabTwoScreenOne extends React.Component {
-  static navigationOptions = {
+static navigationOptions = ({ navigation, tintColor }) => {
+  const {state, setParams} = navigation;
+  //const isInfo = state.params.mode === 'info';
+  //const {user} = state.params;
+  return {
+    //title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
     title: '九宮格解謎',
-  }
+    /*headerRight: (
+    <Icon.Button name="qrcode" backgroundColor="#3b5998" onPress={() => alert('123')}>
+    </Icon.Button>
+    ),*/
+  };
+};
   render(){
     return(
       <View>

@@ -1,7 +1,20 @@
 'use strict'
-import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Platform } from 'react-native';
 export default class TabOneScreenTwo extends React.Component {
+  static navigationOptions = {
+    title:'工作坊',
+    drawerLabel: '工作坊',
+    drawerIcon: ({ tintColor }) => (
+      <Ionicons
+        name={'ios-eye'}
+        size={Platform == 'ios' ? 26 : 20}
+        style={{ color: tintColor }}
+      />
+    ),
+  };
   render(){
     return(
       <View style={{

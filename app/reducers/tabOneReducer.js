@@ -9,12 +9,12 @@ const initialState = {
 
 export const tabOneReducer = (state, action) => {
   switch (action.type) {
-    case 'goSecond':
+    case 'goSecond123':
       return {
         ...state,
        index: 0,
       };
     default:
-      return NavigatorTabOne.router.getStateForAction(action,state);
+      return NavigatorTabOne.router.getStateForAction(action, state) || state;
   }
 }

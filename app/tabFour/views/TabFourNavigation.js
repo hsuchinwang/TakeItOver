@@ -1,17 +1,18 @@
 'use strict'
 
 // React
-import React from 'react'
+import React from 'react';
+import { Platform } from 'react-native';
 // Navigation
 import { addNavigationHelpers } from 'react-navigation';
 import { NavigatorTabFour } from '../navigationConfiguration';
 import { goSecond } from '../../actions/tabOneAction';
 // Redux
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // Icon
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const mapStateToProps = (state) => {
   return {
@@ -29,7 +30,13 @@ function mapDispatchToProps(dispatch) {
 class TabFourNavigation extends React.Component {
   static navigationOptions = {
     tabBarLabel: '領土爭奪',
-    tabBarIcon: ({ tintColor }) => <Icon size={ 20 } name={ 'cogs' } color={ tintColor }/>
+    tabBarIcon: ({ tintColor, focused }) => (
+      <Ionicons
+        name={focused ? 'ios-flag' : 'ios-flag-outline'}
+        size={Platform == 'ios' ? 26 : 20}
+        style={{ color: tintColor }}
+      />
+    )
   }
 
   render(){

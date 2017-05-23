@@ -1,6 +1,6 @@
 'use strict'
 
-import { StackNavigator } from 'react-navigation'
+import { StackNavigator, DrawerNavigator } from 'react-navigation'
 
 // Screens
 import TabOneScreenOne from './views/TabOneScreenOne'
@@ -13,8 +13,10 @@ const routeConfiguration = {
 
 // going to disable the header for now
 const stackNavigatorConfiguration = {
-  //headerMode: 'none',
-  initialRouteName: 'TabOneScreenOne'
+  headerMode: 'screen',
+  mode:'card',
+  initialRouteName: 'TabOneScreenOne',
 }
 
-export const NavigatorTabOne = StackNavigator(routeConfiguration,stackNavigatorConfiguration)
+export const NavigatorTabOne = DrawerNavigator(routeConfiguration, stackNavigatorConfiguration);
+//export const NavigatorTabOne = StackNavigator(routeConfiguration, stackNavigatorConfiguration);
