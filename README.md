@@ -26,10 +26,12 @@ Banner Church summer camp 2017旌旗夏令營配合大地遊戲使用的App
   - 建立遊戲機制所需參數的後端資料表(九宮格、領土爭奪戰、資源點表)
   - 會員帳號密碼建檔(Excel)以及輸入至資料庫中
   - 後台介面及串接
+  - 介面UI名稱
 ##### ✰ Angus Wan 負責項目：
   - 組織及做時程的規劃
   - 發想遊戲機制中的可能性
   - 協助測試及模擬App於實際場域中的各種情形
+  - 介面UI名稱
 ##### ✰ Sam Wang 負責項目：
   - 協助前端程式開發，包含介面及套件的串接
   - 試著實作整個尋寶頁面及與後端API的串接
@@ -80,7 +82,7 @@ TakeItOver App requires [Node.js](https://nodejs.org/) v7.4.0+ to run.
 
 Please Follow the article first to set your Development Environment:
 
-[React Native 入門環境設定](http://ithelp.ithome.com.tw/articles/10186892)
+[React Native 入門環境設定](http://ithelp.ithome.com.tw/articles/10186743)
 
 Install the dependencies and devDependencies before your start.
 #### step1 -Clone一份程式到你的本機
