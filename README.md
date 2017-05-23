@@ -15,6 +15,7 @@ Banner Church summer camp 2017旌旗夏令營配合大地遊戲使用的App
   - 開設工作坊教學
   - 組織及分配工作
   - react-native-fcm的串接
+  - react-native-qrcode-scanner的串接
   - IOS & Android 上架
   - 整合大家的code及Debug
 ##### ✰ Forest 負責項目：
@@ -24,18 +25,21 @@ Banner Church summer camp 2017旌旗夏令營配合大地遊戲使用的App
   - 測試及模擬App於實際場域中的各種情形
   - 建立遊戲機制所需參數的後端資料表(九宮格、領土爭奪戰、資源點表)
   - 會員帳號密碼建檔(Excel)以及輸入至資料庫中
+  - 後台介面及串接
 ##### ✰ Angus Wan 負責項目：
   - 組織及做時程的規劃
   - 發想遊戲機制中的可能性
   - 協助測試及模擬App於實際場域中的各種情形
 ##### ✰ Sam Wang 負責項目：
   - 協助前端程式開發，包含介面及套件的串接
-  - 實作尋寶頁面中的React-Native-Qrcode-Scanner
   - 試著實作整個尋寶頁面及與後端API的串接
+  - 實作首頁Drawer中的靜態頁面國家資料、行程表、工作坊
 ##### ✰ Bomi Chen 負責項目：
   - 協助前端程式開發，包含介面及套件的串接
   - 優化整體App的介面UI設計及與設計師進行溝通
   - 試著實作整個九宮格頁面及與後端API的串接
+  - 實作首頁Drawer中的靜態頁面國家資料、行程表、工作坊
+  
 ##### ✰ 陳康康 負責項目：
   - 協助前端程式開發，包含介面及套件的串接
   - 實作首頁的頁面及與後端API的串接
@@ -47,7 +51,7 @@ Banner Church summer camp 2017旌旗夏令營配合大地遊戲使用的App
   - 領土爭奪戰配合景文科大切分圖(49格)
   - 行程表圖
   - 工作坊講員頭像
-  - 各種資源的Icon圖
+  - 各種資源(上架)的Icon圖
 
 ### Tech
 This app uses a number of open source projects to work properly:
