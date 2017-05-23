@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { addNavigationHelpers, StackNavigator ,DrawerNavigator, TabNavigator } from 'react-navigation';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SimpleTabs from '../components/SimpleTabs';
-
-
-
 import LoginScreen from '../components/LoginScreen';
 import MainScreen from '../components/MainScreen';
 import ProfileScreen from '../components/ProfileScreen';
@@ -47,5 +44,5 @@ const AppWithNavigationState = ({ dispatch, nav }) => (
 const mapStateToProps = state => ({
   nav: state.nav,
 });
-export default TabsInDrawer;
+export default AppNavigator;
 //export default connect(mapStateToProps)(AppWithNavigationState);

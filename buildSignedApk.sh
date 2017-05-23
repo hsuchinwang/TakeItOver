@@ -1,7 +1,7 @@
-#rm takeitover.apk
-#rm takeitover_singed.apk
-#cd android && ./gradlew assembleRelease
-#cd ../
+rm takeitover.apk
+rm takeitover_singed.apk
+cd android && ./gradlew assembleRelease
+cd ../
 mv ./android/app/build/outputs/apk/app-release.apk ./
 mv app-release.apk takeitover.apk
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore takeitover.keystore -storepass takeitover takeitover.apk takeitover
