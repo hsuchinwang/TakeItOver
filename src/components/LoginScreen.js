@@ -30,39 +30,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
   }
 });
-/*
-const LoginScreen = ({ navigation }) => (
-  <View style={styles.container}>
-    <Text style={styles.welcome}>
-      Take it over9000
-    </Text>
-    <Text style={styles.instructions}>
-      This is great
-    </Text>
-    <Button
-      onPress={() => navigation.dispatch({ type: 'Login' })}
-      title="Log in"
-    />
-  </View>
-);*/
 
 const LoginScreen = ({ navigation }) => (
   <View>
     <ScrollView contentContainerStyle={styles.contentContainer}>
     <View title="1" style={styles.row1}>
-      <TouchableOpacity onPress={ () => {alert('A');} }>
-        <View title="1" onPress={ () => {alert('A');} } style={styles.row1Item} />
-      </TouchableOpacity>
-      <View title="1" style={styles.row1Item} />
-      <View title="1" style={styles.row1Item} />
-      <View title="1" style={styles.row1Item} />
-      <View title="1" style={styles.row1Item} />
-      <View title="1" style={styles.row1Item} />
-      <View title="1" style={styles.row1Item} />
-      
-    </View>
-    <View title="1" style={styles.row1}>
-      <View title="1" style={styles.row1Item} />
+      <View title="1" onPress={ () => {alert('A');} } style={styles.row1Item} />
       <View title="1" style={styles.row1Item} />
       <View title="1" style={styles.row1Item} />
       <View title="1" style={styles.row1Item} />
@@ -115,7 +88,19 @@ const LoginScreen = ({ navigation }) => (
       <View title="1" style={styles.row1Item} />
       <View title="1" style={styles.row1Item} />
     </View>
-
+    <View title="1" style={styles.row1}>
+      <View title="1" style={styles.row1Item} />
+      <View title="1" style={styles.row1Item} />
+      <View title="1" style={styles.row1Item} />
+      <View title="1" style={styles.row1Item} />
+      <View title="1" style={styles.row1Item} />
+      <View title="1" style={styles.row1Item} />
+      <View title="1" style={styles.row1Item} />
+    </View>
+    <Button
+      onPress={() => navigation.dispatch({ type: 'Login' })}
+      title="Log in"
+    />
     </ScrollView>
   </View>
 );

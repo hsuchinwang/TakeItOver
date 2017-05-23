@@ -5,20 +5,21 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "production": "react-native run-ios --configuration Release",
+    "ios-production": "react-native run-ios --configuration Release",
+    "an-production": "react-native run-android --variant=release",
     "dev": "react-native run-ios",
     "getjs": "curl http://localhost:8081/index.ios.bundle -o main.jsbundle",
-    "bundle-ios":"react-native bundle --entry-file index.ios.js --platform ios --bundle-output ./bundle/main.jsbundle --dev false --assets-dest ./bundle/",
-    "build-apk": "sh buildSignedApk.sh",
-    "test": "jest",
+    "bundle-ios": "react-native bundle --entry-file index.ios.js --platform ios --bundle-output ./bundle/main.jsbundle --dev false --assets-dest ./bundle/",
     "e-ios": "react-native run-ios",
     "d-ios": "react-native run-ios --device 'Youngdi' ",
-    "rd-ios": "react-native run-ios --configuration Release --device 'Youngdi'",
-    "e-android": "react-native run-android"
+    "r-ios": "react-native run-ios --configuration Release --device 'Youngdi'",
+    "e-an": "react-native run-android",
+    "r-an": "sh buildSignedApk.sh"
   },
   "dependencies": {
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
+    "react-native-vector-icons": "^4.1.1",
     "react-navigation": "^1.0.0-beta.10",
     "react-redux": "5.0.4",
     "redux": "3.6.0"

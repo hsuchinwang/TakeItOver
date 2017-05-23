@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
 
 const MainScreen = () => (
   <View style={styles.container}>
-    <LoginStatusMessage />
     <AuthButton />
   </View>
 );
