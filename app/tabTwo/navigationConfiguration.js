@@ -1,10 +1,10 @@
 'use strict'
 
-import { StackNavigator } from 'react-navigation'
+import { StackNavigator } from 'react-navigation';
 
 // Screens
-import TabTwoScreenOne from './views/TabTwoScreenOne'
-import TabTwoScreenTwo from './views/TabTwoScreenTwo'
+import TabTwoScreenOne from './views/TabTwoScreenOne';
+import TabTwoScreenTwo from './views/TabTwoScreenTwo';
 
 const routeConfiguration = {
   TabTwoScreenOne: { screen: TabTwoScreenOne },
@@ -14,7 +14,7 @@ const routeConfiguration = {
 
 const stackNavigatorConfiguration = {
   //headerMode: 'none',
-  initialRoute: 'TabTwoScreenOne'
+  initialRoute: 'TabTwoScreenOne',
 }
 
-export const NavigatorTabTwo = StackNavigator(routeConfiguration,stackNavigatorConfiguration)
+export const NavigatorTabTwo = StackNavigator(routeConfiguration, stackNavigatorConfiguration);

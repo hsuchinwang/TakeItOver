@@ -2,28 +2,30 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { Platform } from 'react-native';
+import BackgroundImage from '../../components/BackgroundImage';
+import { Platform, Imagem, StyleSheet } from 'react-native';
 export default class TabOneScreenTwo extends React.Component {
-  static navigationOptions = {
-    title:'工作坊',
-    drawerLabel: '工作坊',
-    drawerIcon: ({ tintColor }) => (
-      <Ionicons
-        name={'ios-eye'}
-        size={Platform == 'ios' ? 26 : 20}
-        style={{ color: tintColor }}
-      />
-    ),
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title:'工作坊',
+      headerLeft: (
+        <Ionicons.Button name="ios-menu" color="#185ffe" style={{marginLeft:13}}backgroundColor="#eeeef2" onPress={() => navigation.navigate('DrawerOpen')}>
+        </Ionicons.Button>
+      ),
+      drawerLabel: '工作坊',
+      drawerIcon: ({ tintColor }) => (
+        <Ionicons
+          name={'md-construct'}
+          size={Platform == 'ios' ? 26 : 20}
+          style={{ color: tintColor }}
+        />
+      ),
+    }
   };
   render(){
     return(
-      <View style={{
-        flex:1,
-        backgroundColor:'orange',
-        alignItems:'center',
-        justifyContent:'center'
-      }}>
-        <Text>{ 'Tab One Screen Two' }</Text>
+      <BackgroundImage url={"Galaxy"} >
+        <Text style={styles.text}>{ 'Tab One Screen Two' }</Text>
         <TouchableOpacity
           onPress={ () => this.props.navigation.goBack() }
           style={{
@@ -34,8 +36,15 @@ export default class TabOneScreenTwo extends React.Component {
           }}>
           <Text>{'Go back a screen this tab'}</Text>
         </TouchableOpacity>
-
-      </View>
+      </BackgroundImage>
     )
   }
 }
+const styles = StyleSheet.create({
+    text: {
+        textAlign: 'center',
+        color: 'white',
+        backgroundColor: 'rgba(0,0,0,0)',
+        fontSize: 32
+    }
+});

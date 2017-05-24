@@ -13,7 +13,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const mapStateToProps = (state) => {
  return {
-  navigationState: state.tabTwo
+  navigationState: state.tabTwo,
   }
 }
 class TabTwoNavigation extends React.Component {

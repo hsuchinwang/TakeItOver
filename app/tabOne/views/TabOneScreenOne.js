@@ -2,19 +2,27 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { Platform } from 'react-native';
 
 export default class TabOneScreenOne extends React.Component {
-  static navigationOptions = {
-    title:'首頁',
-    drawerLabel: '首頁',
-    drawerIcon: ({ tintColor }) => (
-      <Ionicons
-        name={'ios-eye'}
-        size={Platform == 'ios' ? 26 : 20}
-        style={{ color: tintColor }}
-      />
-    ),
+  static navigationOptions = ({ navigation }) => {
+    return {
+      visible: false,
+      title:'首頁',
+      headerLeft: (
+        <Ionicons.Button name="ios-menu" color="#185ffe" style={{marginLeft:13}}backgroundColor="#eeeef2" onPress={() => navigation.navigate('DrawerOpen')}>
+        </Ionicons.Button>
+      ),
+      drawerLabel: '首頁',
+      drawerIcon: ({ tintColor }) => (
+        <Ionicons
+          name={'md-home'}
+          size={Platform == 'ios' ? 26 : 20}
+          style={{ color: tintColor }}
+        />
+      ),
+    }
   };
 
   render(){
@@ -27,7 +35,7 @@ export default class TabOneScreenOne extends React.Component {
       }}>
         <Text>{ 'Tab One Screen One' }</Text>
         <TouchableOpacity
-          onPress={ () => this.props.navigation.navigate('TabOneScreenTwo') }
+          onPress={ () => this.props.navigation.navigate('TabOneDrawerTwo') }
           style={{
             padding:20,
             borderRadius:20,

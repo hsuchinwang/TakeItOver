@@ -16,15 +16,15 @@ export default class TabThreeScreenTwo extends React.Component {
         <Icon.Button name="qrcode" color="#000" backgroundColor="#eeeef2" onPress={() => console.log(navigation)}>
         </Icon.Button>
       ),
-      headerLeft: (       
+      headerLeft: (
         <Ionicons
             name='ios-arrow-back'
             size={24}
             color='#1c79ff'
             style={{marginLeft:13}}
-            onPress={()=>{}}
+            onPress={()=>{navigation.goBack();}}
         >
-        123
+        {state.params.titleName}
         </Ionicons>
       ),
     };

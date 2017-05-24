@@ -5,8 +5,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Platform } from 'react-native';
 export default class TabTwoScreenOne extends React.Component {
-static navigationOptions = ({ navigation, tintColor }) => {
-  const {state, setParams} = navigation;
+static navigationOptions = ({ navigation }) => {
+  //const {state, setParams} = navigation;
   //const isInfo = state.params.mode === 'info';
   //const {user} = state.params;
   return {

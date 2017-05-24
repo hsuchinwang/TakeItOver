@@ -1,20 +1,15 @@
 'use strict'
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import BackgroundImage from '../../components/BackgroundImage';
 export default class TabFourScreenOne extends React.Component {
   static navigationOptions = {
     title: '領土爭奪戰',
   }
   render(){
     return(
-      <View style={{
-        flex:1,
-        backgroundColor:'green',
-        alignItems:'center',
-        justifyContent:'center'
-      }}>
-        <Text>{ 'Tab Four Screen One' }</Text>
+      <BackgroundImage url="Fire">
+        <Text style={styles.text}>{ 'Tab Four Screen One' }</Text>
         <TouchableOpacity
           onPress={ () => this.props.navigation.navigate('TabFourScreenTwo') }
           style={{
@@ -35,7 +30,15 @@ export default class TabFourScreenOne extends React.Component {
           }}>
           <Text>{'dispatch Action Go to next screen this tab'}</Text>
         </TouchableOpacity>
-      </View>
+      </BackgroundImage>
     )
   }
 }
+const styles = StyleSheet.create({
+    text: {
+        textAlign: 'center',
+        color: 'white',
+        backgroundColor: 'rgba(0,0,0,0)',
+        fontSize: 32
+    }
+});

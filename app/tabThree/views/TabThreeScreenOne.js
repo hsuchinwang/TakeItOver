@@ -5,17 +5,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default class TabThreeScreenOne extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const {state, setParams} = navigation;
-    const key = {
-      a: '123',
-      b: '222',
-    }
+    const titleName = '尋寶獵人';
     //const isInfo = state.params.mode === 'info';
     //const {user} = state.params;
     return {
       //title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
-      title: '尋寶獵人',
+      title: titleName,
       headerRight: (
-      <Icon.Button name="qrcode" color="#000" backgroundColor="#eeeef2" onPress={() => navigation.navigate('TabThreeScreenTwo', {name: 'Bill'})}>
+      <Icon.Button name="qrcode" color="#000" backgroundColor="#eeeef2" onPress={() => navigation.navigate('TabThreeScreenTwo', {titleName: titleName})}>
       </Icon.Button>
       ),
     };
@@ -31,7 +28,7 @@ export default class TabThreeScreenOne extends React.Component {
         <Text>{ 'Tab Three Screen One' }</Text>
 
         <TouchableOpacity
-          onPress={ () => this.props.navigation.navigate('TabThreeScreenTwo') }
+          onPress={ () => this.props.navigation.navigate('TabThreeScreenTwo',{titleName: '尋寶獵人'}) }
           style={{
             padding:20,
             borderRadius:20,
@@ -42,7 +39,7 @@ export default class TabThreeScreenOne extends React.Component {
 
         <TouchableOpacity
           onPress={
-            () => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{index:0} })
+            () => this.props.navigation.dispatch({ type:'JUMP_TO_TAB', payload:{ index:0 } })
           }
           style={{
             padding:20,
