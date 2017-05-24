@@ -1,7 +1,34 @@
 'use strict'
-import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity, Button } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 export default class TabThreeScreenTwo extends React.Component {
+  static navigationOptions = ({ navigation }) => {
+    
+    const {state, setParams} = navigation;
+    //const isInfo = state.params.mode === 'info';
+    //const {user} = state.params;
+    return {
+      //title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
+      title: '尋寶獵人2',
+      headerRight: (
+        <Icon.Button name="qrcode" color="#000" backgroundColor="#eeeef2" onPress={() => console.log(navigation)}>
+        </Icon.Button>
+      ),
+      headerLeft: (       
+        <Ionicons
+            name='ios-arrow-back'
+            size={24}
+            color='#1c79ff'
+            style={{marginLeft:13}}
+            onPress={()=>{}}
+        >
+        123
+        </Ionicons>
+      ),
+    };
+  };
   render(){
     return(
       <View style={{

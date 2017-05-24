@@ -7,7 +7,7 @@ const initialState = {
 //   currentDir: '',
 };
 
-export const tabBarReducer = (state,action) => {
+export const tabBarReducer = (state, action) => {
   switch (action.type) {
     case 'JUMP_TO_TAB':
       return {

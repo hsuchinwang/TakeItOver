@@ -3,19 +3,23 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 export default class TabThreeScreenOne extends React.Component {
-static navigationOptions = ({ navigation, tintColor }) => {
-  const {state, setParams} = navigation;
-  //const isInfo = state.params.mode === 'info';
-  //const {user} = state.params;
-  return {
-    //title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
-    title: '尋寶獵人',
-    headerRight: (
-    <Icon.Button name="qrcode" color="#000" backgroundColor="#eeeef2" onPress={() => alert('123')}>
-    </Icon.Button>
-    ),
+  static navigationOptions = ({ navigation }) => {
+    const {state, setParams} = navigation;
+    const key = {
+      a: '123',
+      b: '222',
+    }
+    //const isInfo = state.params.mode === 'info';
+    //const {user} = state.params;
+    return {
+      //title: isInfo ? `${user}'s Contact Info` : `Chat with ${state.params.user}`,
+      title: '尋寶獵人',
+      headerRight: (
+      <Icon.Button name="qrcode" color="#000" backgroundColor="#eeeef2" onPress={() => navigation.navigate('TabThreeScreenTwo', {name: 'Bill'})}>
+      </Icon.Button>
+      ),
+    };
   };
-};
   render(){
     return(
       <View style={{

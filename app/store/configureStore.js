@@ -1,7 +1,7 @@
 'use strict'
 
 import { applyMiddleware, combineReducers, createStore } from 'redux';
-import logger from 'redux-logger';
+//import logger from 'redux-logger';
 import rootReducer from '../reducers';
 import devTools from 'remote-redux-devtools';
 

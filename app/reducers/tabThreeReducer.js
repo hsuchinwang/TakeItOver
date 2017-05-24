@@ -15,6 +15,6 @@ export const tabThreeReducer = (state, action) => {
        index: 0,
       };
     default:
-      return NavigatorTabThree.router.getStateForAction(action,state);
+      return NavigatorTabThree.router.getStateForAction(action, state);
   }
 }

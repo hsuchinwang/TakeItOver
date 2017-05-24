@@ -31,5 +31,5 @@ const tabBarConfiguration = {
   }
 }
 
-export const TabBar = TabNavigator(routeConfiguration,tabBarConfiguration)
+export const TabBar = TabNavigator(routeConfiguration, tabBarConfiguration)
 
