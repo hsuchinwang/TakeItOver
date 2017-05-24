@@ -15,13 +15,15 @@ const routeConfiguration = {
 }
 
 const tabBarConfiguration = {
-  //...other configs
   tabBarOptions: {
     activeTintColor: Platform.OS === 'ios' ? '#fff' : '#fff',
     labelStyle: {
-        fontSize: Platform.OS === 'ios' ? 12 : 10,
+        fontSize: Platform.OS === 'ios' ? 12 : 12,
+        color: '#eff0f4',
     },
     showIcon: true,
+    scrollEnabled: false,
+    swipeEnabled: false,
     style: {
       backgroundColor: '#339e85',
     },

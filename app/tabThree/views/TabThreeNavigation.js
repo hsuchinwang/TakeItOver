@@ -22,8 +22,8 @@ class TabThreeNavigation extends React.Component {
     tabBarIcon: ({ tintColor, focused }) => (
       <Ionicons
         name={focused ? 'ios-eye' : 'ios-eye-outline'}
-        size={Platform == 'ios' ? 26 : 20}
-        style={{ color: tintColor }}
+        size={Platform.OS == 'ios' ? 30 : 30}
+        style={{ color: '#eff0f4' }}
       />
     )
   }
